@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1-Assignment</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet" href="validation.js"> -->
+    <style>
+        element.style {
+            margin: 0;
+            padding: 0;
+}
+        .Registration{
+            box-sizing: border-box;
+    margin: 1px 2px;
+    height: 475px;
+    padding: 1px 10px;
+    width: 450px;
+    border-radius: 8px;
+    background-color: rgb(9, 9, 27);
+    margin-left: 4px;
+}
+.Registration-border{
+    border: 3px solid wheat;
+    margin: 46px;
+    width: 250px;
+    height: 300px;
+    /* padding-left: 25px; */
+    color: white;
+    padding: 35px;
+}
+.form-fields{
+    width: 235px;
+    height: 20px;
+    /* text-align: left; */
+    margin: 4px;  
+/* }
+#position{
+    width: 243px;
+    height: 25px;
+    margin: 0px;
+    margin-bottom: 8px; */
+}
+.btn{
+    border-radius: 4px;
+    border-color: darkgray;
+    background-color: rgb(9, 9, 27);
+    color: white;
+    margin: 5px
+}
+.Registration-form{
+    margin: 4px;
+}
+    </style>
+    <script>
+        function validateForm() {
+          let x = document.forms["myForm"]["fname"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+        }
+        </script>
+</head>
+<body>
+    <div class="Registration">
+        <div class="Registration-border">
+        <h1 id="Heading">Register Today</h1>
+        <p id="form-p">Fill in the data below.</p>
+            <div>
+                <form action="bakend.php"name="Registration-form"onsubmit="return validateForm()"class="Registration-form"></form>
+                    <div id="Form-container">
+                        <input type="text" name="fullname" placeholder="Full Name"class="form-fields"/>
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="E-mail Address"class="form-fields"required/>
+                        <span class="form-error-name"></span>
+                    </div>
+                    <div>
+                        <label for="position items"></label>
+                        <select name="position"placeholder="Position"class="form-fields">
+                            <option positionvalue="Select option">Position</option>
+                            <option positionvalue="Engineer">Engineer</option>
+                            <option positionvalue="Manager">Manager</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="password" name="fullname" placeholder="Password"class="form-fields"/>
+                    </div>
+                        <label>Gender:</label>
+                        <span>
+                            <button name="Male-btn" type="button" value="Male"class="btn">Male</button>
+                            <button name="Female-btn" type="button" value="Female"class="btn">Female</button>
+                            <button name="other-btn" type="button" value="Other"class="btn">Other</button>
+                        </span>
+                        <div>
+                            <input type="checkbox"value="abc" checked>
+                            <label>I confirm that all data are correct</label>
+                        </div>
+                        <div>
+                            <button name="registration-btn" type="button" value="Register"class="btn">Register</button>
+                        </div>
+                    </div>
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+   </body>
+</html>
